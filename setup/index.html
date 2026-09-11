@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Your download is ready</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    background:
+        radial-gradient(circle at 50% 0%,
+        rgba(130, 70, 180, 0.12),
+        transparent 35%),
+        #080d13;
+
+    color: #f1f5f9;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1;
+    padding: 80px 20px 70px;
+}
+
+.card {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+
+    text-align: center;
+
+    background: #0b1016;
+    border: 1px solid #27313b;
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+
+.content {
+    padding: 70px 40px 65px;
+}
+
+.label {
+    color: #22c55e;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0 0 18px;
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+.description {
+    max-width: 500px;
+    margin: auto;
+
+    color: #8e99a5;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.download-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 300px;
+    max-width: 100%;
+
+    margin: 55px auto 70px;
+    padding: 14px 20px;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        90deg,
+        #a855f7,
+        #9333ea
+    );
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 19px;
+    font-weight: 700;
+
+    box-shadow:
+        0 10px 30px rgba(168, 85, 247, 0.25);
+
+    transition: 0.2s;
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 14px 35px rgba(168, 85, 247, 0.35);
+}
+
+.download-icon {
+    font-size: 23px;
+    margin-right: 10px;
+}
+
+.status-area {
+    border-top: 1px solid #202832;
+    padding: 28px 20px;
+}
+
+.status {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    color: #89949f;
+    font-size: 13px;
+}
+
+.status span {
+    white-space: nowrap;
+}
+
+.dot {
+    color: #22c55e;
+    margin-right: 7px;
+}
+
+.terminal {
+    max-width: 430px;
+
+    margin: 40px auto 0;
+    padding: 14px 16px;
+
+    background: #020509;
+    border: 1px solid #252e38;
+    border-radius: 6px;
+
+    text-align: left;
+
+    font-family: monospace;
+    font-size: 12px;
+}
+
+.command {
+    color: #22c55e;
+}
+
+.ready {
+    color: #22c55e;
+}
+
+.footer {
+    border-top: 1px solid #1d252d;
+
+    padding: 25px 15px;
+
+    text-align: center;
+
+    color: #7f8a95;
+    font-size: 12px;
+}
+
+.footer-dot {
+    color: #22c55e;
+    margin: 0 7px;
+}
+
+@media (max-width: 600px) {
+
+    .main {
+        padding: 35px 12px;
+    }
+
+    .content {
+        padding: 50px 20px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .download-btn {
+        width: 100%;
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
+
+    .status {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .terminal {
+        font-size: 11px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <main class="main">
+
+        <div class="card">
+
+            <div class="content">
+
+                <div class="label">
+                    LATEST RELEASE
+                </div>
+
+                <h1>
+                    Your download is ready
+                </h1>
+
+                <p class="description">
+                    The requested file is ready.
+                    Click the button below to continue
+                    with the manual download.
+                </p>
+
+                <!-- CHANGE THIS LINK -->
+                <a
+                    href="https://example.com/"
+                    class="download-btn"
+                >
+                    <span class="download-icon">⇩</span>
+                    Download Now
+                </a>
+
+            </div>
+
+            <div class="status-area">
+
+                <div class="status">
+
+                    <span>
+                        <span class="dot">●</span>
+                        Ready
+                    </span>
+
+                    <span>
+                        <span class="dot">●</span>
+                        Manual download
+                    </span>
+
+                    <span>
+                        <span class="dot">●</span>
+                        Latest version
+                    </span>
+
+                </div>
+
+                <div class="terminal">
+                    <span class="command">$</span>
+                    download --latest
+                    <span class="ready">✓ ready</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        © 2026 Download Center
+        <span class="footer-dot">•</span>
+        <span class="footer-dot">●</span>
+        Ready
+    </footer>
+
+</div>
+
+</body>
+</html>
